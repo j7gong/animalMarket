@@ -25,6 +25,7 @@ class Farm extends Model {}
             defaultValue: 10000,
             allowNull: false,
             validate:{
+                isNumeric: true,
                 min: 0
             }
         },
