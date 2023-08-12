@@ -37,6 +37,7 @@ $(document).ready(function() {
                 window.location.href = '/dashboard';
             } else {
                 alert("Invalid login credentials.");
+                window.location.href = '/signup';
             }
         })
         .catch(error => {
