@@ -1,0 +1,81 @@
+<div class="farm-content">
+    <section class="userinfo" id="market" data-farm-id="{{farm.id}}" data-farm-fund="{{farm.fund}}">
+      <h2 class="header-font">
+        {{user.username}}
+      </h2>
+      <h2 class="header-font">
+        {{farm.farm_name}}    
+      </h2>
+      <h2 class="header-font">
+        Your Money: {{farm.fund}}    
+      </h2>
+    </section>
+    <div class="market-content">
+      <!-- Animals in Your Farm Section -->
+      <div class="animals-own">
+          <div class="second-header">
+              <h1 class="text-align text-white text-bold text-aladin text-large text-shadow">
+                Animals in Your farm
+              </h1>
+          </div>
+          <div class ="table-container">
+              <!-- table header -->
+              <div class="table-content header-color box-shadow">
+                  <div class="header-padding"><h3>Animal Name</h3></div>
+                  <div class="header-padding"><h3>Number of Animals You Owned</h3></div>
+              </div>
+              <!-- table content -->
+              {{#if animals.length}}
+              <section>
+                <ul>
+                  {{#each animals as |animal|}}
+                  <li>
+                    {{> animal-info animal}}
+                  </li>
+                  {{/each}}
+                </ul>
+              </section>
+              {{/if}}
+          </div>
+      </div>
+      <!-- Animal Market Section -->
+      <div class="market">
+          <div class="market-header">
+              <h1 class="text-align text-white text-bold text-aladin text-large text-shadow">
+                Animal Market
+              </h1>
+          </div>
+          <div class ="table-container">
+              <!-- table header -->
+              <div class="table-content header-color box-shadow">
+                  <div class="header-padding"><h3>Animal Name</h3></div>
+                  <div class="header-padding"><h3>Buy Price</h3></div>
+                  <div class="header-padding"><h3>Sell Price</h3></div>
+                  <div class="header-padding"><h3 class="placeholder">Place</h3></div>
+                  <div class="header-padding"><h3 class="placeholder">Place</h3></div>
+              </div>
+              {{#if animalStock.length}}
+              <section id = 'market-main'>
+                <ul>
+                  {{#each animalStock as |animalStk|}}
+                  <li>
+                    {{> stock-info animalStk}}
+                  </li>
+                  {{/each}}
+                </ul>
+              </section>
+              {{/if}}
+          </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+<script src="/javascript/logout.js"></script>
+<script src="/javascript/sell-btn.js"></script>
+<script src="/javascript/buy-btn.js"></script>
