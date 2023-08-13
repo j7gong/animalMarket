@@ -55,3 +55,10 @@ Farm.hasMany(Transaction, {
   Animal.hasMany(Transaction, {
     foreignKey: 'animal_id'
 });
+
+module.exports = {
+    User,
+    Farm,
+    Animal,
+    Transaction
+  };
