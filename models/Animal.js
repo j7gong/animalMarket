@@ -38,7 +38,14 @@ Animal.init(
               min: 0
             }
         }
-    }
+    }, 
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'animal',
+      }
 )
 
 module.exports = Animal;
