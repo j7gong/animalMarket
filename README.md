@@ -67,4 +67,4 @@ Please follow the industry standard.
 ## Tests
 Please run ``npm run test`` test your application.
 ## Questions
-This is my Github Profile https://github.com/jgong7. If you have any additional questions, please reach me at gongjingsi@hotmail.com
+This is my Github Profile [https://github.com/j7gong](https://github.com/j7gong/). If you have any additional questions, please reach me at gongjingsi@hotmail.com
