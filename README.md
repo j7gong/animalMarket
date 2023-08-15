@@ -61,3 +61,10 @@ Money user owned should be reduced
     THEN either buying window or selling window should be closed and I’m presented on animal market page.
 
 ![ScreenShot](./public/images/applicationImg.jpg)
+
+## Contributing
+Please follow the industry standard.
+## Tests
+Please run ``npm run test`` test your application.
+## Questions
+This is my Github Profile https://github.com/jgong7. If you have any additional questions, please reach me at gongjingsi@hotmail.com
