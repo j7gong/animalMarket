@@ -266,26 +266,54 @@ Please run ``npm run test`` test the application.
 
   * Testing Environment: Virtual machine/Device with required specifications
 Browser/Platform: Compatible browsers and devices
+
   * Test Data: Various sets of test data for different scenarios
 
+* Test Case Selection Methodology:
+
+  * The test cases were selected based on different functional aspects of the virtual farm application. We aimed to cover a range of scenarios including initial setup, market interaction, buying and selling animals, and handling transactions. The goal was to ensure comprehensive coverage of the core application features, considering both successful and edge cases.
+
 * Test Scenarios:
-  * Scenario 1: 
-    * Initial User Login and Farm Setup
+
+  * Scenario 1: Initial User Login and Farm Setup
     * Open the application.
     * Verify that the user is prompted to enter their name, email, and password.
     * Enter valid credentials and click the "Start" button.
     * Verify that the default farm name is displayed.
     * Verify that the user can change the farm name to another valid name.
+  * Test Procedure 1
+
+| Test Step	Description  | Expected Result  |  Actual Result |
+|---|---|---|
+|1	Open the application.   |  Application opens successfully. | PASS  | 
+|2	Enter valid credentials and click "Start".   | User is logged in successfully.  |  PASS |
+|3	Verify default farm name is displayed.  | Default farm name is displayed.	  | PASS  | 
+|4	Enter a new farm name and click "Change Name".|	Farm name is updated with the new value.|	PASS|
+
   * Scenario 2: Default Farm Setup
     * Login to the application.
     * Verify that the default farm is displayed with initial animals (chicken, sheep, duck).
     * Verify that the initial fund amount is set to 5000.
-    * Scenario 3: Animal Market Access
+  * Test Procedure 2
+
+|Test Step	Description	|Expected Result|	Actual Result|
+|---|---|---|
+|1	Login to the application.|	User is logged in successfully.|	PASS|
+|2	Verify default farm animals and funds.	|Initial animals and funds are displayed correctly.	|PASS|
+  * Scenario 3: Animal Market Access
     * Login to the application.
     * Click on the "Animal Market" button.
     * Verify that the user is directed to the animal market page.
     * Verify that the available animals for buying and selling are displayed, including their attributes (name, sell price, cost price).
     * Verify that the animals owned by the user are also displayed.
+  * Test Procedure 3
+
+|Test Step	Description|	Expected Result|	Actual Result|
+|---|---|---|
+|1	Login to the application.|	User is logged in successfully.|	PASS|
+|2	Click on "Animal Market" button.|	Animal market page opens.|	PASS|
+|3	Verify available animals and user-owned animals.|	Animals are displayed with correct attributes.|	PASS|
+
   * Scenario 4: Selling Animals
     * Follow steps 1-3 from "Animal Market Access."
     * Click the "Sell" button for a specific animal.
@@ -294,7 +322,15 @@ Browser/Platform: Compatible browsers and devices
     * Verify that the user's owned animal count decreases by the sold amount.
     * Verify that the market's animal count increases by the sold amount.
     * Verify that the user's funds increase based on the sale.
-    * Scenario 5: Buying Animals
+  * Test Procedure 4
+
+|Test Step	Description|	Expected Result|	Actual Result|
+|---|---|---|
+|1	Follow steps 1-3 from "Animal Market Access."|	Animal market page opens.|	PASS|
+|2	Click "Sell" button for a specific animal.|	Selling window opens.|	PASS|
+|3	Enter a valid number of animals and click "Submit".|	User-owned animal count decreases, market animal count increases, user funds increase.|	PASS|
+
+  * Scenario 5: Buying Animals
     * Follow steps 1-3 from "Animal Market Access."
     * Click the "Buy" button for a specific animal.
     * Enter a valid number of animals to buy in the prompted window.
@@ -302,13 +338,30 @@ Browser/Platform: Compatible browsers and devices
     * Verify that the user's owned animal count increases by the bought amount.
     * Verify that the market's animal count decreases by the bought amount.
     * Verify that the user's funds decrease based on the purchase.
+  * Test Procedure 5
+
+|Test Step	Description|	Expected Result|	Actual Result|
+|---|---|---|
+|1	Follow steps 1-3 from "Animal Market Access."|	Animal market page opens.|	PASS|
+|2	Click "Buy" button for a specific animal.|	Buying window opens.|	PASS|
+|3	Enter a valid number of animals and click "Submit".|	User-owned animal count increases, market animal count decreases, user funds decrease.|	PASS|
+
   * Scenario 6: Canceling Transactions
     * Follow steps 1-3 from "Animal Market Access."
     * Click the "Buy" or "Sell" button for a specific animal.
     * Click the "Cancel" button in the prompted window.
     * Verify that the prompted window is closed.
     * Verify that the user is returned to the animal market page.
-    * Test Deliverables:
+  * Test Procedure 6
+
+|Test Step	Description|	Expected Result|	Actual Result|
+|---|---|---|
+|1	Follow steps 1-3 from "Animal Market Access."|	Animal market page opens.|	PASS|
+|2	Click "Buy" or "Sell" button for a specific animal.|	Buying/Selling window opens.|	PASS|
+|3	Click "Cancel" button in the window.|	Buying/Selling window is closed, user is back on the market page.|	PASS|
+
+
+* Test Deliverables:
     * Test scenarios with expected results.
     * Test data used for various scenarios.
     * Test cases execution results.
