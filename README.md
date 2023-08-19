@@ -22,8 +22,8 @@ a chicken, sheep, and duck, along with a starting fund of 10,000.
 - [Usage](#usage)
 - [Risk Management Report](#Risk-Management-Report)
 - [Configuration Management Report](#Configuration-Management-Report)
-- [Contributing](#contributing)
 - [Testing Report](#testing-report)
+- [Contributing](#contributing)
 - [Questions](#questions)
 
 ## Installation
@@ -251,11 +251,11 @@ Money user owned should be reduced
 
   * The Animal Farm Web Game project has been developed with a stringent focus on maintaining quality, reliability, and transparency. By adhering to the best practices in configuration management and leveraging the power of version control systems like GitHub, we ensure the project's integrity and success.
 
-
+## Testing Report
+Please run ``npm run test`` test your application.
 ## Contributing
 Please follow the industry standard.
-## Tests
-Please run ``npm run test`` test your application.
+
 ## Questions
 
 This is my Github Profile [https://github.com/j7gong](https://github.com/j7gong/). If you have any additional questions, please reach me at gongjingsi@hotmail.com
