@@ -252,7 +252,66 @@ Money user owned should be reduced
   * The Animal Farm Web Game project has been developed with a stringent focus on maintaining quality, reliability, and transparency. By adhering to the best practices in configuration management and leveraging the power of version control systems like GitHub, we ensure the project's integrity and success.
 
 ## Testing Report
-Please run ``npm run test`` test your application.
+Please run ``npm run test`` test the application.
+
+* Testing Objective:
+
+  * Verify that the virtual farm application functions as expected, allowing users to manage their virtual farm, buy and sell animals, and handle transactions accurately.
+
+* Scope:
+
+  * This test plan covers testing for the virtual farm application's core features, including user login, farm management, animal market interaction, buying and selling animals, and transaction handling.
+
+* Test Environment:
+
+  * Testing Environment: Virtual machine/Device with required specifications
+Browser/Platform: Compatible browsers and devices
+  * Test Data: Various sets of test data for different scenarios
+
+* Test Scenarios:
+  * Scenario 1: 
+    * Initial User Login and Farm Setup
+    * Open the application.
+    * Verify that the user is prompted to enter their name, email, and password.
+    * Enter valid credentials and click the "Start" button.
+    * Verify that the default farm name is displayed.
+    * Verify that the user can change the farm name to another valid name.
+  * Scenario 2: Default Farm Setup
+    * Login to the application.
+    * Verify that the default farm is displayed with initial animals (chicken, sheep, duck).
+    * Verify that the initial fund amount is set to 5000.
+    * Scenario 3: Animal Market Access
+    * Login to the application.
+    * Click on the "Animal Market" button.
+    * Verify that the user is directed to the animal market page.
+    * Verify that the available animals for buying and selling are displayed, including their attributes (name, sell price, cost price).
+    * Verify that the animals owned by the user are also displayed.
+  * Scenario 4: Selling Animals
+    * Follow steps 1-3 from "Animal Market Access."
+    * Click the "Sell" button for a specific animal.
+    * Enter a valid number of animals to sell in the prompted window.
+    * Click the "Submit" button.
+    * Verify that the user's owned animal count decreases by the sold amount.
+    * Verify that the market's animal count increases by the sold amount.
+    * Verify that the user's funds increase based on the sale.
+    * Scenario 5: Buying Animals
+    * Follow steps 1-3 from "Animal Market Access."
+    * Click the "Buy" button for a specific animal.
+    * Enter a valid number of animals to buy in the prompted window.
+    * Click the "Submit" button.
+    * Verify that the user's owned animal count increases by the bought amount.
+    * Verify that the market's animal count decreases by the bought amount.
+    * Verify that the user's funds decrease based on the purchase.
+  * Scenario 6: Canceling Transactions
+    * Follow steps 1-3 from "Animal Market Access."
+    * Click the "Buy" or "Sell" button for a specific animal.
+    * Click the "Cancel" button in the prompted window.
+    * Verify that the prompted window is closed.
+    * Verify that the user is returned to the animal market page.
+    * Test Deliverables:
+    * Test scenarios with expected results.
+    * Test data used for various scenarios.
+    * Test cases execution results.
 ## Contributing
 Please follow the industry standard.
 
