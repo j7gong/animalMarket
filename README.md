@@ -1,9 +1,68 @@
 # Animal Market
 
+## Overview ##
+We will be building a web game called Animal Farm 
+
+where players can raise and take care of virtual animals on their own farm. 
+
+Upon opening the web browser, users are prompted to enter
+
+their username, email, and password to start the game. 
+
+Once logged in, they are presented with a
+
+default farm name which can be changed. 
+
+The default farm comes with initial animals including
+
+a chicken, sheep, and duck, along with a starting fund of 10,000.
 
 ## Table of Contents
-- [Risk Management Report]
-- [Configuration Management Report]
+- [Installation](#installation)
+- [Usage](#usage)
+- [Risk Management Report](#Risk Management Report)
+- [Configuration Management Report](#Configuration Management Report)
+- [Contributing](#contributing)
+- [Testing Report](#testing report)
+- [Questions](#questions)
+
+## Installation
+To generate your own note taker, ``git clone`` the repo down to your local so you have the Node project on your local. 
+
+Run ``npm install`` in order to install the following npm package dependencies as specified in the package.json. 
+
+The application will start by running ``npm start`` in the command line. 
+
+Then you can go to http://localhost:3001 to view your app.
+
+You can test each module by running ``npm run test``.
+## Usage
+* GIVEN I am using a virtual farm to raise animals,  
+  * WHEN I open the application    
+    THEN the user name, email, and password should be presented to start
+  * WHEN I login in   
+    THEN I am presented with a default farm name and I’m able to change it to another name
+  * WHEN I login in    
+    THEN I am presented with a default farm with initial animals including one chicken, sheep, and duck and fund number as 5000. 
+  * WHEN I login in 
+    THEN I am presented with animal market button.
+  * WHEN I click the animal market button
+    THEN I’m directed to the animal market page with available animals on the markets including animal name, sell price, cost price, and buttons of selling, buying, and close. 
+    Note that in animal markets page, it should also display what animals that user own to allow them make decisions on selling or buying.
+  * WHEN I click button of selling
+    THEN I’m presented with prompted window including number box for user to enter and buttons of submit and cancel
+  * When I click the button of submit on selling window,
+    THEN the number of owned animal from user should be dedected; Meanwhile, the number of animal from market should be added;
+      Money user owned should be added
+  * WHEN I click button of buying
+    THEN I’m presented with prompted window including number box for user to enter and buttons of submit and cancel
+  * When I click the button of submit on buying window,
+the number of owned animal from user should be added; Meanwhile, the number of animal from market should be reduced;
+Money user owned should be reduced
+  * WHEN I click button of cancel
+    THEN either buying window or selling window should be closed and I’m presented on animal market page.
+
+![ScreenShot](./public/images/applicationImg.jpg)
 
 ## Risk Management Report
 * Project Overview
@@ -18,61 +77,96 @@
 * Risk Identification and Assessment:
 
   * Risk 1: Complex Interaction Logic
-    *	Category: technical risks
-    * Impact: High
-    * Probability: Moderate
-    * Total Risk Score: 6
-    * Documentation and Reasoning: The new interaction mechanics in Version 2 introduce complex logic, increasing the potential for bugs and inconsistencies.
+    	
+      Category: technical risks
+      
+      Impact: High
+      
+      Probability: Moderate
+      
+      Total Risk Score: 6
+      
+      Documentation and Reasoning: The new interaction mechanics in Version 2 introduce complex logic, increasing the potential for bugs and inconsistencies.
 
   * Risk 2: Usability Challenges
-    * Category: User Experience Risks
-    * Impact: Moderate
-    * Probability: Moderate
-    * Total Risk Score: 4
-    * Documentation and Reasoning: Enhanced features in Version 2 may lead to user confusion and difficulties navigating the interface.
+     
+     Category: User Experience Risks
+     
+     Impact: Moderate
+     
+     Probability: Moderate
+     
+     Total Risk Score: 4
+     
+     Documentation and Reasoning: Enhanced features in Version 2 may lead to user confusion and difficulties navigating the interface.
       
   * Risk 3: Monetization Effectiveness
-    * Category: Financial
-    * Impact: Moderate
-    * Probability: Moderate
-    * Total Risk Score: 4
-    * Documentation and Reasoning: The success of monetization strategies in Version 2 is uncertain and could affect revenue generation.
+     
+     Category: Financial
+     
+     Impact: Moderate
+     
+     Probability: Moderate
+     
+     Total Risk Score: 4
+     
+     Documentation and Reasoning: The success of monetization strategies in Version 2 is uncertain and could affect revenue generation.
 
   * Risk 4: Third-Party Services
-    * Category: Technical Dependencies
-    * Impact: Moderate
-    * Probability: Low
-    * Total Risk Score: 3
-    * Documentation and Reasoning: Reliance on external services (e.g., Heroku) could lead to potential service interruptions impacting game availability.
+     
+     Category: Technical Dependencies
+     
+     Impact: Moderate
+     
+     Probability: Low
+     
+     Total Risk Score: 3
+     
+     Documentation and Reasoning: Reliance on external services (e.g., Heroku) could lead to potential service interruptions impacting game availability.
 
   * Risk 5: Code Conflicts
-    * Category: Version Control Challenges
-    * Impact: Low
-    * Probability: Low
-    * Total Risk Score: 1
-    * Documentation and Reasoning: Multiple developers working on different features may encounter code conflicts during integration.
+     
+     Category: Version Control Challenges
+     
+     Impact: Low
+     
+     Probability: Low
+     
+     Total Risk Score: 1
+     
+     Documentation and Reasoning: Multiple developers working on different features may encounter code conflicts during integration.
 
 * Risk Mitigation and Control:
 
   * Risk 1: Complex Interaction Logic:
-     * Mitigation Plan: Conduct thorough code reviews and extensive testing of interaction mechanics to identify and address potential bugs.
-     * Historical Records: Maintain a record of identified issues and actions taken to resolve them.
+      
+      Mitigation Plan: Conduct thorough code reviews and extensive testing of interaction mechanics to identify and address potential bugs.
+      
+      Historical Records: Maintain a record of identified issues and actions taken to resolve them.
 
   * Risk 2: Usability Challenges:
-     * Mitigation Plan: Engage users in usability testing and implement iterative design updates based on feedback.
-     * Historical Records: Document usability testing results and design changes.
+      
+      Mitigation Plan: Engage users in usability testing and implement iterative design updates based on feedback.
+      
+      Historical Records: Document usability testing results and design changes.
 
   * Risk 3: Monetization Effectiveness:
-     * Mitigation Plan: Continuously monitor user engagement, analyze player behavior, and adapt monetization strategies as needed.
-     * Historical Records: Keep track of revenue data and adjustments made to monetization approaches.
+      
+      Mitigation Plan: Continuously monitor user engagement, analyze player behavior, and adapt monetization strategies as needed.
+      
+      Historical Records: Keep track of revenue data and adjustments made to monetization approaches.
 
   * Risk 4: Third-Party Services
-     * Mitigation Plan: Establish contingency plans for service disruptions, such as having an alternative hosting solution in place.
-     * Historical Records: Maintain a log of service availability and any instances of disruptions.
+      
+      Mitigation Plan: Establish contingency plans for service disruptions, such as having an alternative hosting solution in place.
+      
+      Historical Records: Maintain a log of service availability and any instances of disruptions.
 
   * Risk 5: Code Conflicts
-     * Mitigation Plan: Enforce version control guidelines, use feature branches, and conduct regular code reviews to prevent and address code conflicts.
-     * Historical Records: Document code conflicts and resolutions during integration.
+      
+      Mitigation Plan: Enforce version control guidelines, use feature branches, and conduct regular code reviews to prevent and address code conflicts.
+      
+      Historical Records: Document code conflicts and resolutions during integration.
        
 * Week-by-Week Risk Management:
 
@@ -91,49 +185,63 @@
 
   * Change Control Workflow:
 
-    * Initiation: A software change request (SCR) is proposed by any member, describing the change, its purpose, and its potential impact.
-    * Review: The team reviews the SCR to assess its feasibility, impact, and estimated implementation time.
-    * Approval/Rejection: Post review, the SCR is either approved or rejected. If rejected, feedback is provided.
-    * Implementation: If approved, the change is implemented in a separate branch (not master).
-    * Testing: Post-implementation, rigorous tests are carried out to ensure the change hasn't negatively impacted the system.
-    * Merge: Once tested and deemed successful, the change is merged into the master branch.
-    * Close: The SCR is closed and documented with the date, details of the change, and the person responsible.
+     Initiation: A software change request (SCR) is proposed by any member, describing the change, its purpose, and its potential impact.
+     
+     Review: The team reviews the SCR to assess its feasibility, impact, and estimated implementation time.
+     
+     Approval/Rejection: Post review, the SCR is either approved or rejected. If rejected, feedback is provided.
+     
+     Implementation: If approved, the change is implemented in a separate branch (not master).
+     
+     Testing: Post-implementation, rigorous tests are carried out to ensure the change hasn't negatively impacted the system.
+     
+     Merge: Once tested and deemed successful, the change is merged into the master branch.
+     
+     Close: The SCR is closed and documented with the date, details of the change, and the person responsible.
 
   * States of Software Change Request (SCR):
 
-    * Open: The SCR has been proposed but not yet reviewed.
-    * Under Review: The SCR is currently being considered by the team.
-    * Approved: The SCR has been accepted for implementation.
-    * Rejected: The SCR will not be implemented. Reasons for rejection are documented.
-    * In Progress: The change is currently being implemented.
-    * Tested: The change has undergone testing.
-    * Merged: The change has been integrated into the master branch.
-    * Closed: The SCR process for the particular request has concluded.
+     Open: The SCR has been proposed but not yet reviewed.
+     
+     Under Review: The SCR is currently being considered by the team.
+     
+     Approved: The SCR has been accepted for implementation.
+     
+     Rejected: The SCR will not be implemented. Reasons for rejection are documented.
+     
+     In Progress: The change is currently being implemented.
+     
+     Tested: The change has undergone testing.
+     
+     Merged: The change has been integrated into the master branch.
+     
+     Closed: The SCR process for the particular request has concluded.
 
 * Branching and Tagging Scheme:
 
   * Branching:
 
-    * Master Branch: This is the main branch containing the stable and tested version of the software.
-    * Development Branches: For every SCR or feature addition, a new branch is created. E.g., if a new animal type is to be added, a branch named "add-new-animal" might be created.
+     Master Branch: This is the main branch containing the stable and tested version of the software.
+     
+     Development Branches: For every SCR or feature addition, a new branch is created. E.g., if a new animal type is to be added, a branch named "add-new-animal" might be created.
 
   * Tagging:
 
-    * Upon completion and thorough testing of a software version, the master branch is tagged with the version number. This ensures easy retrieval of previous versions. For instance, after the successful implementation of Version 1, it would be tagged as "v1.0".
+     Upon completion and thorough testing of a software version, the master branch is tagged with the version number. This ensures easy retrieval of previous versions. For instance, after the successful implementation of Version 1, it would be tagged as "v1.0".
 
 * Tool Use:
 
   * GitHub for Version Control:
 
-    * All software components are placed in our GitHub repository. The repository is structured to ensure easy tracking of changes, with every SCR resulting in a new branch.
+     All software components are placed in our GitHub repository. The repository is structured to ensure easy tracking of changes, with every SCR resulting in a new branch.
 
   * Branching and Tagging in Practice:
 
-    * For every SCR, a dedicated branch is created. Post its successful testing, it is merged to the master branch. Once a version is deemed complete, it is tagged appropriately to denote its version number.
+     For every SCR, a dedicated branch is created. Post its successful testing, it is merged to the master branch. Once a version is deemed complete, it is tagged appropriately to denote its version number.
 
   * Repository Access:
 
-    * The instructor has been granted 'read' access to the repository. This ensures transparency and allows for periodic review.
+     The instructor has been granted 'read' access to the repository. This ensures transparency and allows for periodic review.
 
 * Documentation:
 
@@ -144,7 +252,10 @@
   * The Animal Farm Web Game project has been developed with a stringent focus on maintaining quality, reliability, and transparency. By adhering to the best practices in configuration management and leveraging the power of version control systems like GitHub, we ensure the project's integrity and success.
 
 
+## Contributing
+Please follow the industry standard.
+## Tests
+Please run ``npm run test`` test your application.
+## Questions
 
-
-
-
+This is my Github Profile [https://github.com/j7gong](https://github.com/j7gong/). If you have any additional questions, please reach me at gongjingsi@hotmail.com
