@@ -20,10 +20,10 @@ a chicken, sheep, and duck, along with a starting fund of 10,000.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Risk Management Report](#Risk Management Report)
-- [Configuration Management Report](#Configuration Management Report)
+- [Risk Management Report](#Risk-Management-Report)
+- [Configuration Management Report](#Configuration-Management-Report)
 - [Contributing](#contributing)
-- [Testing Report](#testing report)
+- [Testing Report](#testing-report)
 - [Questions](#questions)
 
 ## Installation
